@@ -5,12 +5,12 @@ import java.util.List;
 
 public class Generics {
 
-    public   List<Object> boxingMethod(Object name) {
-        List<Object> firstList = new ArrayList<>();
+    public   List<List<String>> boxingMethod(String name) {
+        List<String> firstList = new ArrayList<>();
         firstList.add(name);
-        List<Object> secondList = new ArrayList<>();
+        List<List<String>> secondList = new ArrayList<>();
         secondList.add(firstList);
-        return new ArrayList<>(secondList);
+        return secondList;
     }
 
     public <T> Object genericMethod(T data) {
